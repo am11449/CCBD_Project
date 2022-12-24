@@ -271,7 +271,7 @@ apigClientFactory.newClient = function (config) {
         var postresumeFolderFilePutRequest = {
             verb: 'put'.toUpperCase(),
             path: pathComponent + uritemplate('/postresume/{folder}/{file}').expand(apiGateway.core.utils.parseParametersToObject(params, ['file', 'folder', ])),
-            headers: apiGateway.core.utils.parseParametersToObject(params, ['Content-Type', 'x-amz-meta-customLabels']),
+            headers: apiGateway.core.utils.parseParametersToObject(params, ['Content-Type']),
             queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
             body: body
         };

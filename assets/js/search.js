@@ -1,6 +1,12 @@
 var apigClient;
 var username;
-window.localStorage.setItem('user_id','am11449');
+username=sessionStorage.getItem('user_id');
+// window.localStorage.setItem('user_id','am11449');
+// validateSession();
+//username=getUser(username)
+//window.localStorage.setItem('user_id',username['username']);
+//console.log(window.localStorage.getItem('user_id'));
+//validateSession();
 
 document.querySelector('#search-field').addEventListener('keypress', function(e){
     // console.log("HIIIIII")
@@ -127,6 +133,9 @@ function listJobInformation(result)
 function listJobs(result, likedJobs)
 	{
 		// if !likedJobs:
+		if (!likedJobs){
+			likedJobs= {}
+		}
         const likedJobsList = Object.keys(likedJobs)
         console.log("LIKED JOBS")
         // console.log(likedJobs)

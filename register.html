@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
+        <script type="text/javascript" src="assets/js/aws-sdk.min.js"></script>
+        <script type="text/javascript" src="assets/js/amazon-cognito-identity.min.js"></script>
+        <script type="text/javascript" src="assets/js/utils.js"></script>
+        <!--<script type="text/javascript" src="assets/js/register.js"></script>-->
 
         <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
@@ -19,9 +23,10 @@
           </nav>
           <span id="welcome-msg"></span>
           <a id="logout-link" href="#">Logout</a>
+
           <i id="avatar" class="avatar fa fa-user fa-2x"></i>
         </header>
-      
+
         <div class="container">
             <header>
                 <p>
@@ -29,22 +34,22 @@
                     Job recommendations
                 </p>
             </header>
-      
+
             <section class="main-section">
                 <div id="register-form">
                     <label for="emailid">Email ID: *</label>
                     <input id="register-username" name="username" type="text">
                     <label for="password">Password: *</label>
                     <input id="register-password" name="password" type="password">
-                    <label for="resume">Resume: *</label>
-                    <input id="resume-file-input" name="resume" type="file">
+                    <!-- <label for="resume">Resume: *</label> -->
+                    <!-- <input id="resume-file-input" name="resume" type="file"> -->
                     <button id="register-btn">Next -></button>
                     <p id="register-result"></p>
                 </div>
-            
+
                 <div id="profile-form">
-                    <!-- <label for="verif-code">Enter the verification code received on your email: *</label> -->
-                    <!-- <input id="profile-verif-code" name="verif-code" type="text"> -->
+                    <label for="verif-code">Enter the verification code received on your email: *</label>
+                    <input id="profile-verif-code" name="verif-code" type="text"> 
                     <label for="firstname">First Name: *</label>
                     <input id="profile-firstname" name="firstname" type="text">
                     <label for="lastname">Last Name: *</label>
@@ -81,7 +86,10 @@
     <script type="text/javascript" src="assets/js/sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
     <script type="text/javascript" src="assets/js/sdk/lib/apiGatewayCore/utils.js"></script>
     <script type="text/javascript" src="assets/js/sdk/apigClient.js"></script>
+    <script type="text/javascript" src="assets/js/amazon-cognito-identity.min.js"></script>
+    <script type="text/javascript" src="assets/js/aws-sdk.min.js"></script>
     <script type="text/javascript" src="assets/js/utils.js"></script>
     <script type="text/javascript" src="assets/js/register.js"></script>
+    <script type="text/javascript" src="assets/js/logout.js"></script>
 </body>
 </html>

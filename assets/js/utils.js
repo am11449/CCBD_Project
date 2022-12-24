@@ -166,3 +166,7 @@ function clearLoginError() {
       xhr.send(data);
     }
   }
+
+function alertLoginError(){
+    
+}

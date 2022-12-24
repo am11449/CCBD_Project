@@ -1,6 +1,8 @@
 var apigClient;
 var username;
-window.localStorage.setItem('user_id','am11449');
+username=sessionStorage.getItem('user_id');
+// window.localStorage.setItem('user_id','am11449'); 
+//validateSession();   
 
 document.querySelector('#fav-btn').addEventListener('click', createProfileView);
 
@@ -122,6 +124,7 @@ function uploadResumeToS3()
 		        let body = data;
 		        let params = {"file" : newFile.name, 'Content-Type': newFile.type, 'x-amz-meta-customLabels': labels, 'folder': 'linkedout-resumestore2'};
 		        let additionalParams = {};
+                body='data:image/jpeg;base64,'+body
 
 				console.log(body);
 				console.log(params);
@@ -229,6 +232,7 @@ function renderProfile(profile)
     resume_disp_box.attr("id", "resume-display-box")
     let resume_preview = $("<img>")
     resume_preview.attr("src", "https://linkedout-resumestore2.s3.amazonaws.com/" + window.localStorage.getItem('user_id') + ".jpeg")
+    console.log(resume_preview.attr("src"))
     resume_preview.attr("alt", "No resume found")
     resume_disp_box.append(resume_preview)
 

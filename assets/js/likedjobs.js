@@ -1,6 +1,8 @@
 var apigClient;
+// window.localStorage.setItem('user_id','am11449');
+//validateSession();
 var username;
-window.localStorage.setItem('user_id','am11449');
+username=sessionStorage.getItem('user_id');
 
 document.querySelector('#recommend-btn').addEventListener('click', getUserLikedJobs);
 
@@ -151,6 +153,11 @@ function getUserLikedJobs()
 			console.log(result);
 			let data = result["data"];
 			let li = data["liked_jobs"];
+
+			if (!li){
+				li= {}
+			}
+
 			const li_keys = Object.keys(li);
 			console.log("LIKED JOBSSSS");
 			console.log(li_keys);

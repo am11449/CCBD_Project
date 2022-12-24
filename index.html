@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
+        <script type="text/javascript" src="assets/js/utils.js"></script>
+        <script type="text/javascript" src="assets/js/session.js"></script>
 
         <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
@@ -21,7 +23,7 @@
           <a id="logout-link" href="#">Logout</a>
           <i id="avatar" class="avatar fa fa-user fa-2x"></i>
         </header>
-      
+
         <div class="container">
             <header>
                 <p>
@@ -29,7 +31,7 @@
                     Job recommendations
                 </p>
             </header>
-      
+
             <section class="main-section">
                 <div id="login-form">
                 <label for="username">Username:</label>
@@ -37,7 +39,7 @@
                 <label for="password">Password:</label>
                 <input id="password" name="password" type="password">
                 <button id="register-form-btn"><a href="register.html">New User? Register</a></button>
-                <button id="login-btn">Login</button>
+                <button id="login-btn"><a href="myprofile.html">Login</a></button>
                 <p id="login-error"></p>
                 </div>
             </section>
@@ -47,17 +49,21 @@
         <p>"Help you find your next perfect job"</p>
     </footer>
 
-    <script type="text/javascript" src="sdk/lib/axios/dist/axios.standalone.js"></script>
-    <script type="text/javascript" src="sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
-    <script type="text/javascript" src="sdk/lib/CryptoJS/rollups/sha256.js"></script>
-    <script type="text/javascript" src="sdk/lib/CryptoJS/components/hmac.js"></script>
-    <script type="text/javascript" src="sdk/lib/CryptoJS/components/enc-base64.js"></script>
-    <script type="text/javascript" src="sdk/lib/url-template/url-template.js"></script>
-    <script type="text/javascript" src="sdk/lib/apiGatewayCore/sigV4Client.js"></script>
-    <script type="text/javascript" src="sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
-    <script type="text/javascript" src="sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
-    <script type="text/javascript" src="sdk/lib/apiGatewayCore/utils.js"></script>
-    <script type="text/javascript" src="sdk/apigClient.js"></script>
-<script>
-    var sdk = apigClientFactory.newClient({});
-</script>
+    <script type="text/javascript" src="assets/js/sdk/lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/apigClient.js"></script>
+    <script type="text/javascript" src="assets/js/aws-sdk.min.js"></script>
+    <script type="text/javascript" src="assets/js/amazon-cognito-identity.min.js"></script>
+    <script type="text/javascript" src="assets/js/utils.js"></script>
+    <script type="text/javascript" src="assets/js/index.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/logout.js"></script> -->
+</body>
+</html>
